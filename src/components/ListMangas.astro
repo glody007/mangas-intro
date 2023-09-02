@@ -1,0 +1,22 @@
+---
+import Card from '../components/Card.astro';
+import { MangasItem } from '../components/Card.astro';
+
+export interface Props {
+	items: Array<MangasItem>;
+}
+
+const { items } = Astro.props as Props;
+---
+
+<ul role="list" class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8 gap-y-8 place-items-center sm:place-items-start mt-8">
+    {items.map((item, index) => (
+        <Card
+            id={index}
+            href={item.href}
+            src={item.src}
+            title={item.title}
+            author={item.author}
+        />
+    ))}
+</ul>

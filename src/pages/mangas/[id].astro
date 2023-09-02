@@ -1,0 +1,17 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import Card from '../../components/Card.astro';
+import { listMangas } from '../../../config/mangas'
+
+export function getStaticPaths() {
+  return listMangas.map((_, i) => ({params: { id: i}}))
+}
+
+const { id } = Astro.params;
+---
+
+<Layout title="Mangas details">
+	<main class="container mx-auto py-8">
+		<Card {...listMangas[id]} />
+	</main>
+</Layout>
