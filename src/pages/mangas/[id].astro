@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import { listMangas } from '../../../config/mangas'
 import MangasOverview from '../../components/MangasOverview.astro';
+import Video from '../../components/Video.jsx';
 
 export function getStaticPaths() {
   return listMangas.map((_, i) => ({params: { id: i}}))
@@ -11,7 +12,8 @@ const { id } = Astro.params;
 ---
 
 <Layout title="Mangas details">
-	<main class="container flex flex-start mx-auto py-8">
+	<main class="container flex flex-col flex-start gap-4 mx-auto py-8">
+		<Video url={listMangas[id].opening} client:load />
 		<MangasOverview {...listMangas[id]} />
 	</main>
 </Layout>
