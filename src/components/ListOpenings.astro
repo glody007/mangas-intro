@@ -1,0 +1,30 @@
+---
+import OpeningOverview from './OpeningOverview';
+
+
+export interface OpeningItem {
+	id?: string;
+	title: string;
+	author: string;
+	href: string;
+    src: string;
+    opening: string;
+}
+
+export interface Props {
+	items: Array<OpeningItem>;
+}
+
+const { items } = Astro.props as Props;
+---
+
+<ul role="list" class="flex flex-col gap-4">
+    {items.map((item, index) => (
+        <OpeningOverview
+            title={item.title}
+            author={item.author}
+            href={`/mangas/${index}`}
+            src={item.src}
+        />
+    ))}
+</ul>
