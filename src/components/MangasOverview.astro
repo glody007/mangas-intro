@@ -1,0 +1,19 @@
+---
+export interface MangasItem {
+	id?: string;
+	title: string;
+	author: string;
+	src: string;
+	href: string;
+}
+
+const { src, title, author} = Astro.props as MangasItem;
+---
+
+<div class="flex justify-center items-start gap-2">
+    <img src={src} alt="Mangas image" class="w-[30px] rounded-lg shadow" transition:name={`${title}-image`} />
+    <div transition:name={`${title}-descrition`}>
+        <p class="font-bold">{title}</p>
+        <p class="text-sm text-slate-500">By {author}</p>
+    </div>
+</div>
