@@ -10,10 +10,10 @@ const { items } = Astro.props as Props;
 ---
 
 <ul role="list" class="grid grid-cols-1 sm:grid-cols-3 md:grid-cols-5 gap-8 gap-y-8 place-items-center sm:place-items-start mt-8">
-    {items.map((item, index) => (
+    {items.map(item => (
         <MangasCard
-            id={index}
-            href={`mangas/${index}`}
+            id={item.id}
+            href={`mangas/${item.id}`}
             src={item.src}
             title={item.title}
             author={item.author}

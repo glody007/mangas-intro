@@ -12,8 +12,8 @@ const { src, title, author, href } = Astro.props as MangasItem;
 
 <div class="flex flex-col">
 	<a class="group" href={href}>
-		<img src={src} alt="Mangas image" class="rounded-lg shadow" transition:name={`${title}-image`} />
-		<div transition:name={`${title}-descrition`}>
+		<img src={src} alt="Mangas image" class="object-cover rounded-lg shadow" transition:name={`${title}-image`} />
+		<div transition:name={`${title}-description`}>
 			<p class="font-bold mt-4 group-hover:text-orange-500">{title}</p>
 			<p class="text-sm text-slate-500">By {author}</p>
 		</div>

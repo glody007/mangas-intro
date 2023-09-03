@@ -1,5 +1,6 @@
 export const listMangas = [
 	{
+        id: "0",
         title:"One Piece",
         author:"Eiichiro Oda",
 		href:"/one-piece",
@@ -7,6 +8,7 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=HRaoYuRKBaA"
 	},
 	{
+        id: "1",
         title:"Naruto",
         author:"Masashi Kishimoto",
 		href:"/naruto",
@@ -14,6 +16,7 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=4t__wczfpRI&list=PLTGXZPSNXuQF0TugWpvhWbOAAKmyl4xVQ"
 	},
 	{
+        id: "2",
         title:"Kimetsu no Yaiba",
         author:"Koyoharu Gotoge",
 		href:"demon-slayer",
@@ -21,6 +24,7 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=C7v3QuZc-7A"
 	},
 	{
+        id: "3",
         title:"Hunter x Hunter",
         author:"Yoshihiro Togashi",
 		href:"/hunterxhunter",
@@ -28,6 +32,7 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=3wQiyOmAUOA"
 	},
 	{
+        id: "4",
         title:"Fullmetal Alchemist",
         author:"Hiromu Arakawa",
 		href:"/fullmetal",
@@ -35,6 +40,7 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=UHKSiBjrmx4"
 	},
 	{
+        id: "5",
         title:"Attack on Titan",
         author:"Hajime Isayama",
 		href:"/attack-on-titan",
@@ -42,13 +48,15 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=CbvQKBaDUWI"
 	},
 	{
+        id: "6",
         title:"Death Note",
         author:"Tsugumi Ohba / Takeshi Obata",
 		href:"/death-note",
-        src:"https://jw-webmagazine.com/wp-content/uploads/2020/05/Death-Note.jpg",
+        src:"https://www.yourdecoration.fr/cdn/shop/products/abystyle-abydco114-death-note-group-nr-1-poster-38x52cm_500x.jpg?v=1664668196",
         opening: "https://www.youtube.com/watch?v=KdGOV8FX6F4"
 	},
 	{
+        id: "7",
         title:"My Hero Academia",
         author:"Kohei Horikoshi",
 		href:"/my-hero-academia",
@@ -56,6 +64,7 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=yu0HjPzFYnY"
 	},
 	{
+        id: "8",
         title:"Case Closed",
         author:"Gosho Aoyama",
 		href:"/case-closed",
@@ -63,6 +72,7 @@ export const listMangas = [
         opening: "https://www.youtube.com/watch?v=iR2l9M0KzuQ"
 	},
 	{
+        id: "9",
         title:"Bleach",
         author:"Tite Kubo",
 		href:"/bleach",

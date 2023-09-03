@@ -19,11 +19,11 @@ const { items } = Astro.props as Props;
 ---
 
 <ul role="list" class="flex flex-col gap-4">
-    {items.map((item, index) => (
+    {items.map(item => (
         <OpeningOverview
             title={item.title}
             author={item.author}
-            href={`/mangas/${index}`}
+            href={`/mangas/${item.id}`}
             src={item.src}
         />
     ))}

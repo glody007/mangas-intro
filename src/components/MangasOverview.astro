@@ -12,7 +12,7 @@ const { src, title, author} = Astro.props as MangasItem;
 
 <div class="flex items-start gap-2">
     <img src={src} alt="Mangas image" class="w-[30px] rounded-lg shadow" transition:name={`${title}-image`} />
-    <div transition:name={`${title}-descrition`}>
+    <div transition:name={`${title}-description`}>
         <p class="font-bold">{title}</p>
         <p class="text-sm text-slate-500">By {author}</p>
     </div>
