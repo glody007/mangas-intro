@@ -17,7 +17,9 @@ const filteredMangas = listMangas.filter(mangas => id !== mangas.id)
 <Layout title="Mangas details">
 	<main class="container mx-auto px-4 sm:px-0 py-8 flex flex-col md:flex-row gap-4">
 		<div class="flex-1 max-h-[500px] flex flex-col flex-start gap-4 sm:mr-4">
-			<Video url={listMangas[id].opening} client:load />
+			<div class="w-full h-full bg-black/10">
+				<Video src={listMangas[id].opening} client:load transition:persist transition:name="media-player" />
+			</div>
 			<MangasOverview {...listMangas[id]} />
 		</div>
 		<ListOpenings items={filteredMangas} />

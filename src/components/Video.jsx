@@ -1,7 +1,9 @@
 import ReactPlayer from 'react-player/youtube'
 
-export default function Video({ url }) {
+export default function Video({ src }) {
     return (    
-        <ReactPlayer url={url} controls={true} width='100%' height='100%' />
+        <video class="w-full h-full" controls autoplay="" transition:persist>
+            <source src={src} type="video/mp4" />
+        </video>
     );
 }
