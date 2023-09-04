@@ -20,7 +20,7 @@ const filteredMangas = listMangas.filter(mangas => id !== mangas.id)
 			<Video client:only transition:persist transition:name="media-player" />
 			<MangasOverview {...listMangas[id]} />
 		</div>
-		<div class="sm:mt-8">
+		<div>
 			<ListOpenings items={filteredMangas} />
 		</div>
 	</main>
