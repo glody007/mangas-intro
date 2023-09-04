@@ -1,4 +1,4 @@
-# Astro + Live View Transitions Demo + Maintaining State on an Astro island
+# Astro 3.0 + Live View Transitions Demo + Persistent Islands✨
 
 ### 👉🏽 [Live Demo](https://mangas-intro.pages.dev/)
 
