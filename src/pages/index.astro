@@ -10,8 +10,8 @@ import Video from '../components/Video.jsx';
 	<main class="container mx-auto px-4 sm:px-0 py-8">
 		<h1 class="text-3xl font-extrabold text-center sm:text-start">Mangas</h1>
 		<ListMangas items={listMangas} />
-		<div class="fixed  bottom-8 right-[50%] translate-x-[50%] sm:right-8 sm:translate-x-0 w-[300px] h-[180px] sm:w-[400px] sm:h-[240px] bg-black/50">
-			<Video src={listMangas[3].opening} client:load transition:persist transition:name="media-player" />
+		<div class="fixed bottom-8 right-[50%] translate-x-[50%] sm:right-8 sm:translate-x-0 w-[300px] h-[180px] sm:w-[400px] sm:h-[240px]">
+			<Video client:only transition:persist transition:name="media-player" />
 		</div>
 	</main>
 </Layout>
