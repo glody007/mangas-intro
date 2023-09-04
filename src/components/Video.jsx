@@ -16,7 +16,13 @@ export default function Video({ closable = false }) {
         return parts[2]
     }
 
-    useEffect(() => {
+    useEffect(() => { 
+        
+        if(isMangasPath(window.location.pathname) && id === '') {
+            setId(getId(window.location.pathname))
+            videoRef.current?.load()
+        }
+
         const onPageChange = () => {
             const newPath = window.location.pathname
             if(isMangasPath(newPath) && getId(newPath) !== id) {
