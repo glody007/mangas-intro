@@ -2,7 +2,7 @@ import { useEffect } from 'react';
 import { useRef, useState } from 'react';
 import { listMangas } from '../../config/mangas';
 
-export default function Video({ closable = false }) {
+export default function Video({ closable = true }) {
     const [id, setId] = useState('')
 
     const videoRef = useRef();
@@ -17,7 +17,7 @@ export default function Video({ closable = false }) {
     }
 
     useEffect(() => { 
-        
+
         if(isMangasPath(window.location.pathname) && id === '') {
             setId(getId(window.location.pathname))
             videoRef.current?.load()
@@ -38,22 +38,26 @@ export default function Video({ closable = false }) {
         }
     })
 
-    return (    
-        <div class="relative group w-full h-full">
-            {closable && (<button 
-                class="hidden group-hover:block absolute z-10 right-2 px-2 text-white font-bold bg-black/30 hover:bg-black rounded-lg" 
-                onClick={() => {
-                    
-                }}
-            >
-                X
-            </button>)}
-            {listMangas[id] && (
-                <video ref={videoRef} class="w-full h-full" controls autoplay="">
-                    <source src={listMangas[id].opening} type="video/mp4" />
-                </video>
-            )}
-        </div>
-        
+    return ( 
+        <>
+            {id && (
+            <div class="relative group w-full h-full">
+                {closable && (
+                    <button 
+                        class="hidden group-hover:block absolute z-10 right-2 px-2 text-white font-bold bg-white/30 rounded-lg" 
+                        onClick={() => {   
+                            setId('') 
+                        }}
+                    >
+                        X
+                    </button>
+                )}
+                {listMangas[id] && (
+                    <video ref={videoRef} class="w-full h-full" controls autoplay="">
+                        <source src={listMangas[id].opening} type="video/mp4" />
+                    </video>
+                )}
+            </div>)}
+        </>  
     );
 }
